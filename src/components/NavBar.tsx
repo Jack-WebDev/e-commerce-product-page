@@ -5,9 +5,8 @@ import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
 import { ShoppingBag, Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import logo from '@/assets/logo.svg';
-import avatar from '@/assets/image-avatar.png';
-
+import logo from "@/assets/logo.svg";
+import avatar from "@/assets/image-avatar.png";
 
 const navItems = [
   { label: "Collections", href: "#" },
@@ -35,7 +34,7 @@ export default function NavBar() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <img src={logo} alt="logo" className="h-8" />
+          <img src={logo} alt="logo" className="h-4 lg:h-8" />
         </motion.div>
 
         <button
@@ -55,7 +54,7 @@ export default function NavBar() {
           } md:flex md:items-center md:gap-x-8`}
         >
           <ul
-            className={`flex flex-col md:flex-row md:items-center gap-y-4 md:gap-y-0 md:gap-x-8 absolute top-0 left-0 right-0 bg-white w-[80%] mx-auto rounded-xl md:relative md:w-auto ${
+            className={`flex flex-col md:flex-row md:items-center gap-y-4 md:gap-y-0 md:gap-x-8 absolute top-0 left-0 right-0 bg-white w-[80%] mx-auto rounded-xl md:relative md:w-auto translate-y-12 md:translate-y-0 ${
               isMobileMenuOpen ? "mt-6" : ""
             }`}
           >
@@ -79,7 +78,7 @@ export default function NavBar() {
           </ul>
         </div>
 
-        <div className="profile hidden md:flex items-center gap-x-6">
+        <div className="profile flex items-center gap-x-6">
           <Dialog>
             <DialogTrigger asChild>
               <motion.div
